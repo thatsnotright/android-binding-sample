@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TwoLineListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    binding:onClick="Click">
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        binding:text="data.BigDecimalConverter(total)"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="31dp"
+        binding:text="data.BigDecimalConverter(tip)"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</TwoLineListItem>

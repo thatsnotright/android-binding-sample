@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, FlicktotipActivity!</string>
+    <string name="app_name">Flicktotip</string>
+    <color name="selectedBucket">#3ff0</color>
+    <string name="selectItem">Select an item first.</string>
+
+</resources>

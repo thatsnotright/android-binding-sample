@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" android:descendantFocusability="afterDescendants">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tip %"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits="3"
+            android:inputType="number"
+            android:text="15" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/addSomething"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add" 
+            binding:onClick="AddItem"
+            />
+
+        <Button
+            android:id="@+id/addBucket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Bucket"
+            binding:onClick="AddBucket" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bucketizer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/items"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight=".7"
+            android:numColumns="1" 
+            binding:itemSource="ItemList"
+            binding:itemTemplate="@layout/itemview"
+            >
+        </ListView>
+        <ListView
+            android:id="@+id/buckets"
+            android:layout_width="94dp"
+            android:layout_height="fill_parent"
+            android:numColumns="1" android:drawSelectorOnTop="true"
+            binding:itemSource="BucketList"
+            binding:itemTemplate="@layout/bucketview">
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>
